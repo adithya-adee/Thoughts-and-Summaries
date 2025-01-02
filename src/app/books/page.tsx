@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function AboutMe() {
+export default function Books() {
   return (
     <div>
-      About Me
+      Hello World
     </div>
   )
 }

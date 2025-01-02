@@ -2,6 +2,8 @@
 import { Blog } from "@/type/BlogType";
 import React, { useEffect, useState } from "react";
 
+import { HoverEffect } from "@/components/ui/card-hover";
+
 export default function Blogs() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
 
@@ -33,18 +35,7 @@ export default function Blogs() {
 
   return (
     <div>
-      <h1>Blogs</h1>
-      <ul className="mt-16">
-        {blogs.map((blog) => (
-          <li key={blog.id}>
-            <h2>
-              {blog.title}
-              <span>{blog.tags}</span>
-            </h2>
-            <p>{blog.category}</p>
-          </li>
-        ))}
-      </ul>
+      <HoverEffect baseRoute="blogs" items={blogs} />
     </div>
   );
 }
